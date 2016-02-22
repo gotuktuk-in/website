@@ -5,6 +5,7 @@
 
 $( document ).ready(function() {
     console.log( "ready!" );
+    ga('send', 'pageview');
     enable();
 });
 function enable() {
@@ -60,9 +61,10 @@ function submitForm() {
         }).fail(function () {
             // alert( "error" );
             $('#submitbtn').removeAttr("disabled");
-
         }).always(function () {
             //alert( "finished" );
+            ga('send', 'event', 'Form-Submit', "Submit","Form Submited",$('#usermobile').val());
+
             $('#submitbtn').removeAttr("disabled");
             $("#submitloader").hide()
             $('#seccessDiv').show()
@@ -109,6 +111,7 @@ function submitForm() {
                 $('#submitbtn').removeAttr("disabled");
             }).always(function () {
                 // alert( "finished" );
+                ga('send', 'event', 'Form-Submit', "Submit","Form Submited",$('#vehicleNumber').val());
                 $('#submitbtn').removeAttr("disabled");
                 $("#submitloader").hide()
                 $('#seccessDiv').show();
@@ -117,4 +120,12 @@ function submitForm() {
             });
         }
     }
+}
+
+function isNumberKey(evt){
+    var charCode = (evt.charCode) ? evt.charCode :  evt.keyCode
+         // (event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode ===8 || event.keyCode === 46'
+    if ((charCode >= 48 && charCode <= 57) || charCode ===8 || charCode === 46)
+        return true;
+    return false;
 }
