@@ -3,6 +3,11 @@ body {
     font-size: 13px;
     line-height: 1.6;
 }
+.b47TT-privacy, .b47TT-terms{
+    font-family: "Times New Roman", Georgia, Serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+}
 .printOnly {
     display: none;
     visibility: hidden;
@@ -10,13 +15,18 @@ body {
 .h1, h1 {
     font-size: 32px;
 }
+.h2, h2 {
+    font-size: 26px;
+}
 .h1, .h2, .h3, h1, h2, h3 {
     margin-bottom: 15px;
     margin-top: 40px;
+    font-weight: bold;
 }
 .h4, .h5, .h6, h4, h5, h6 {
     margin-bottom: 15px;
     margin-top: 15px;
+    font-weight: bold;
 }
 p {
     margin: 10px 0;
@@ -628,7 +638,9 @@ input[type="checkbox"]:checked + i:before {
     .container {
         width: 900px;
     }
-
+    .container.privacy-terms {
+        width: 1170px;
+    }
     .b47TT-mApp-img img {
         height: auto;
         width: auto;
