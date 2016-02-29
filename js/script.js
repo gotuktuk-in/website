@@ -8,6 +8,7 @@ $( document ).ready(function() {
     ga('send', 'pageview');
     enable();
 });
+
 function enable() {
     var inputDissabled = $( "input" ).attr( "disabled" );
     $('#enable').click(function() {
@@ -18,7 +19,8 @@ function enable() {
             $("#rikshaw").removeAttr( "disabled" )
             $("#city").removeAttr( "disabled" )
             $("#vehicleNumber").removeAttr( "disabled" )
-            $("#overlay").hide()
+            /$("#overlay").slideDown();
+            //$("#overlay").show();
 
         } else {
             $("#bike").attr ( "disabled", "disabled" );
@@ -29,7 +31,8 @@ function enable() {
             $("#rikshaw").attr('checked', false);
             $("#city").removeClass ( "error" );
             $("#vehicleNumber").removeClass ( "error" );
-            $("#overlay").show()
+            $("#overlay").slideUp();
+            //$("#overlay").hide()
         }
 
         // $( "#log" ).html( "input title is now " + input.attr( "disabled" ) );
