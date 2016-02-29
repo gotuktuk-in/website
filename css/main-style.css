@@ -12,6 +12,10 @@ body {
     display: none;
     visibility: hidden;
 }
+sup {
+    font-size: 10px !important;
+    top: -18px !important;
+}
 .h1, h1 {
     font-size: 36px;
 }
