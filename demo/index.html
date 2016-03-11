@@ -896,8 +896,8 @@
 <script>
 
     var search = window.location.search;
-    var lt, ln;
-    if (search) {
+    var lt=22.7228, ln=75.8737;
+    /*if (search) {
         search.split('&').forEach(function (qs) {
             console.log(qs);
             qs = qs.split('=');
@@ -913,7 +913,20 @@
     }
     if (!ln) {
         lt = 75.8737
-    }
+    }*/
+	setTimeout(function(){getLocation()},2000);
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			alert('Please allow your location.')
+		}
+	}
+	function showPosition(position) {
+		lt = position.coords.latitude 
+		lt = position.coords.longitude  
+	}
+	
     var vehicles;
     var vehicleName = []
     var vehicleNumber = []
