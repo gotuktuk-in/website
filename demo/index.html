@@ -16,7 +16,7 @@
             display: -moz-box;
             display: -ms-flexbox;
             display: -webkit-flex;
-            display: flex;
+            display: block;
             -webkit-flex-flow: row wrap;
             flex-flow: row wrap;
             overflow: hidden;
@@ -896,7 +896,8 @@
 <script>
 
     var search = window.location.search;
-    var lt=22.7228, ln=75.8737;
+	//22.671281, 75.884598
+    var lt=22.671281, ln=75.884598;
     /*if (search) {
         search.split('&').forEach(function (qs) {
             console.log(qs);
@@ -907,14 +908,14 @@
                 ln = qs[1];
             }
         });
-    }
+    }*/
     if (!lt) {
         lt = 22.7228
     }
     if (!ln) {
         lt = 75.8737
-    }*/
-	setTimeout(function(){getLocation()},2000);
+    }
+	/* setTimeout(function(){getLocation()},2000);
 	function getLocation() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition);
@@ -925,7 +926,7 @@
 	function showPosition(position) {
 		lt = position.coords.latitude 
 		lt = position.coords.longitude  
-	}
+	} */
 	
     var vehicles;
     var vehicleName = []
